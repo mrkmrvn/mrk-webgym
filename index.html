@@ -407,6 +407,15 @@ body.loaded .rlabels{animation:fI .6s .8s both}
 
 /* ===== MOBILE FIX v2 ===== */
 @media (max-width:768px){
+  
+  .shell{
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+
+  .shell::-webkit-scrollbar{
+    display:none;
+  }
 
 html,body{
   overflow:auto;
