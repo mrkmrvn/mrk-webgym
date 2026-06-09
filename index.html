@@ -466,18 +466,6 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
   ring.style.left=rx+'px';ring.style.top=ry+'px';
   requestAnimationFrame(loop);
 })();
-document.querySelectorAll('a,.logo-btn').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{
-    cur.style.transform='translate(-50%,-50%) scale(2.4)';
-    ring.style.width='44px';ring.style.height='44px';
-    ring.style.borderColor='rgba(138,128,152,.7)';
-  });
-  el.addEventListener('mouseleave',()=>{
-    cur.style.transform='translate(-50%,-50%) scale(1)';
-    ring.style.width='30px';ring.style.height='30px';
-    ring.style.borderColor='rgba(138,128,152,.5)';
-  });
-});
 
 // ── TYPEWRITER ──
 function type(el,txt,spd,cb){
