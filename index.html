@@ -340,6 +340,118 @@ html,body{
   transform: translateY(-7px);
 }
 
+
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px){
+
+html,body{
+overflow:auto;
+cursor:auto;
+}
+
+#cur,#ring{display:none;}
+
+.page{
+top:8px;
+left:8px;
+right:8px;
+bottom:8px;
+border-radius:32px;
+}
+
+.intro{
+left:24px !important;
+top:90px !important;
+width:calc(100% - 48px) !important;
+}
+
+.h1,
+.title,
+.intro h1{
+font-size:clamp(42px,11vw,64px)!important;
+line-height:0.9!important;
+}
+
+.sub,
+.intro p{
+font-size:14px!important;
+line-height:1.4!important;
+}
+
+.links-row{
+display:grid!important;
+grid-template-columns:1fr 1fr;
+gap:10px;
+width:100%;
+}
+
+.btn{
+width:100%;
+height:52px;
+justify-content:center;
+}
+
+.btn-label{
+font-size:13px;
+padding:0 10px;
+}
+
+.stats{
+display:grid!important;
+grid-template-columns:1fr 1fr;
+gap:12px;
+width:100%;
+margin-top:20px;
+}
+
+.stat{
+min-width:0!important;
+width:100%!important;
+height:140px!important;
+padding-left:20px!important;
+border-radius:28px!important;
+}
+
+.stat::before{
+left:20px!important;
+top:18px!important;
+}
+
+.stat-n{
+font-size:32px!important;
+}
+
+.stat-l{
+font-size:14px!important;
+}
+
+.rlabels{
+display:none!important;
+}
+
+.exp-card{
+width:280px!important;
+height:120px!important;
+right:8px!important;
+bottom:8px!important;
+background-size:contain!important;
+background-repeat:no-repeat!important;
+}
+
+.exp{
+margin-right:30px!important;
+margin-bottom:16px!important;
+}
+
+.exp-title{
+font-size:16px!important;
+}
+
+.exp-sub{
+font-size:12px!important;
+}
+}
 </style>
 </head>
 <body>
