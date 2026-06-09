@@ -648,6 +648,27 @@ body{
 }
 }
 
+
+.btn.is-active .btn-icon{
+  width:42px;
+  height:40px;
+  margin-left:4px;
+  opacity:1;
+}
+
+.stat.is-active{
+  background:rgba(255,255,255,.8);
+}
+.stat.is-active .stat-n{
+  color:#505063;
+}
+.stat.is-active .stat-l{
+  color:rgba(0,0,0,.4);
+}
+.stat.is-active::before{
+  background:#FFE4C0;
+}
+
 </style>
 </head>
 <body class="is-loading">
@@ -712,7 +733,7 @@ body{
     <div class="links">
       <div class="links-row">
         <!-- WEBDESIGN -->
-        <a href="https://www.figma.com/proto/PDej0sUZ6n7G0Q2EVSK66h/veymest--%D0%BA%D0%B5%D0%B9%D1%81%D1%8B-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-?node-id=1-785&t=0YL6NjstL9VNT58H-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A785&show-proto-sidebar=1" target="_blank" class="btn">
+        <a href="https://www.figma.com/design/PDej0sUZ6n7G0Q2EVSK66h/veymest--%D0%BA%D0%B5%D0%B9%D1%81%D1%8B-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-?m=auto&t=TlhDvhDcA2iIOhk6-1" target="_blank" class="btn">
           <span class="btn-label">Webdesign</span>
           <span class="btn-icon"></span>
         </a>
@@ -898,6 +919,31 @@ body{
     });
   }
 })();
+
+const buttons=document.querySelectorAll('.btn');
+let activeBtn=0;
+if(buttons.length) buttons[0].classList.add('is-active');
+
+buttons.forEach((btn,index)=>{
+  btn.addEventListener('mouseenter',()=>{
+    buttons[activeBtn]?.classList.remove('is-active');
+    activeBtn=index;
+    buttons[activeBtn].classList.add('is-active');
+  });
+});
+
+const stats=document.querySelectorAll('.stat');
+let activeStat=0;
+if(stats.length) stats[0].classList.add('is-active');
+
+stats.forEach((card,index)=>{
+  card.addEventListener('mouseenter',()=>{
+    stats[activeStat]?.classList.remove('is-active');
+    activeStat=index;
+    stats[activeStat].classList.add('is-active');
+  });
+});
+
 </script>
 </body>
 </html>
