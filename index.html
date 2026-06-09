@@ -413,6 +413,44 @@ html,body{
 }
 }
 
+
+@media (max-width:768px){
+
+/* уменьшить все правые подписи */
+.rlabels{
+  right:28px !important;
+}
+
+.rl{
+  font-size:12px !important;
+  letter-spacing:.08em !important;
+}
+
+.coords{
+  font-size:11px !important;
+}
+
+/* квадратные карточки */
+.stats{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:14px !important;
+}
+
+.stat{
+  min-width:unset !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:1/1 !important;
+  padding-left:22px !important;
+}
+
+.stat .num{
+  font-size:28px !important;
+}
+
+}
+
 </style>
 </head>
 <body>
