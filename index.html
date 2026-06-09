@@ -374,6 +374,45 @@ html,body{
 
 }
 
+
+@media (max-width:768px){
+
+/* уменьшение боковых подписей */
+.pos,
+.coords,
+.coord,
+.meta,
+.future,
+.axis,
+[class*="future"],
+[class*="axis"],
+[class*="coord"]{
+  font-size:11px !important;
+  letter-spacing:.12em !important;
+}
+
+/* карточки 2x2 */
+.stats,
+.stats-wrap,
+.cards{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:14px !important;
+}
+
+.stat-card,
+.card{
+  width:auto !important;
+  min-width:0 !important;
+}
+
+/* experience чуть компактнее */
+.experience-card{
+  transform:scale(.85);
+  transform-origin:bottom right;
+}
+}
+
 </style>
 </head>
 <body>
