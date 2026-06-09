@@ -346,34 +346,132 @@ html,body{
 /* ===== MOBILE FIX v2 ===== */
 @media (max-width:768px){
 
-/* одинаковый размер всех боковых надписей */
+html,body{
+  overflow:auto;
+  cursor:auto;
+}
+
+#cur,#ring{display:none;}
+
+/* не масштабируем page */
+.page{
+  top:8px;
+  left:8px;
+  right:8px;
+  bottom:8px;
+  border-radius:32px;
+}
+
+/* уменьшаем весь контент внутри как делает Safari */
+.shell{
+  zoom:.78;
+  transform-origin:top center;
+}
+
+.exp-card{
+  zoom:.78;
+}
+
+}
+
+
+@media (max-width:768px){
+
+/* уменьшение боковых подписей */
+.pos,
+.coords,
+.coord,
+.meta,
+.future,
+.axis,
+[class*="future"],
+[class*="axis"],
+[class*="coord"]{
+  font-size:11px !important;
+  letter-spacing:.12em !important;
+}
+
+/* карточки 2x2 */
+.stats,
+.stats-wrap,
+.cards{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:14px !important;
+}
+
+.stat-card,
+.card{
+  width:auto !important;
+  min-width:0 !important;
+}
+
+/* experience чуть компактнее */
+.experience-card{
+  transform:scale(.85);
+  transform-origin:bottom right;
+}
+}
+
+
+@media (max-width:768px){
+
+/* уменьшить все правые подписи */
+.rlabels{
+  right:28px !important;
+}
+
+.rl{
+  font-size:12px !important;
+  letter-spacing:.08em !important;
+}
+
+.coords{
+  font-size:11px !important;
+}
+
+/* квадратные карточки */
+.stats{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:14px !important;
+}
+
+.stat{
+  min-width:unset !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:1/1 !important;
+  padding-left:22px !important;
+}
+
+.stat .num{
+  font-size:28px !important;
+}
+
+}
+
+
+@media (max-width:768px){
+
+/* все боковые подписи одного размера */
 .rl,
 .coords{
     font-size:12px !important;
-    line-height:1 !important;
     letter-spacing:.12em !important;
 }
 
-/* соцкнопки чуть ниже */
-.socials{
-    transform:translateY(12px) !important;
-}
-
-/* статистика чуть выше */
-.stats{
-    transform:translateY(-18px) !important;
-    gap:12px !important;
-}
-
-/* компактные квадратные карточки */
+/* карточки вернуть к компактному размеру */
 .stat{
     width:145px !important;
     height:145px !important;
     min-width:145px !important;
     max-width:145px !important;
-    min-height:145px !important;
-    max-height:145px !important;
-    aspect-ratio:1/1 !important;
+    aspect-ratio:auto !important;
+}
+
+.stats{
+    gap:12px !important;
 }
 
 }
